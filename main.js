@@ -1,14 +1,76 @@
-// store value of each button sequence before the " - + / x " buttons are pressed
-// clear input field after each " - + / x " button is pressed
-// perform calculation once " = " button is pressed
+// 1. store value of input and display it in the screen
+// 2. once a math button is clicked, clear input screen and perform math equation on 2nd input
+// 3. keep doing this until the 'equal' button is pressed
+// 4. display calculation result
 
 
 let result;
-let input = document.querySelector("#screen").value;
-let one = document.querySelector("#one").value;
+let numberKeys = {
+    1: 1,
+    2: 2,
+    3: 3,
+    4: 4,
+    5: 5,
+    6: 6,
+    7: 7,
+    8: 8,
+    9: 9,
+    0: 0
+};
 
-let calculation = {
-    add: function(...input){
-        result = input += input;
-    }
-}
+// 1. 
+
+document.querySelector("#one").addEventListener("click", function() {
+    let text = document.querySelector("#screen");
+    text.value += 1;
+});
+
+document.querySelector("#two").addEventListener("click", function() {
+    let text = document.querySelector("#screen");
+    text.value += 2;
+});
+
+document.querySelector("#three").addEventListener("click", function() {
+    let text = document.querySelector("#screen");
+    text.value += 3;
+});
+
+document.querySelector("#four").addEventListener("click", function() {
+    let text = document.querySelector("#screen");
+    text.value += 4;
+});
+
+document.querySelector("#five").addEventListener("click", function() {
+    let text = document.querySelector("#screen");
+    text.value += 5;
+});
+
+document.querySelector("#six").addEventListener("click", function() {
+    let text = document.querySelector("#screen");
+    text.value += 6;
+});
+
+document.querySelector("#seven").addEventListener("click", function() {
+    let text = document.querySelector("#screen");
+    text.value += 7;
+});
+
+document.querySelector("#eight").addEventListener("click", function() {
+    let text = document.querySelector("#screen");
+    text.value += 8;
+});
+
+document.querySelector("#nine").addEventListener("click", function() {
+    let text = document.querySelector("#screen");
+    text.value += 9;
+});
+
+document.querySelector("#zero").addEventListener("click", function() {
+    let text = document.querySelector("#screen");
+    text.value += 0;
+});
+
+document.querySelector("#clear").addEventListener("click", function() {
+    let text = document.querySelector("#screen");
+    text.value = null;
+});
