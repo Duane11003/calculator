@@ -1,24 +1,18 @@
-// 1. store value of input and display it in the screen
-// 2. once a math button is clicked, clear input screen and perform math equation on 2nd input
-// 3. keep doing this until the 'equal' button is pressed
-// 4. display calculation result
-
+// Make an array that stores input
+// Push new item to the array after user clicks a math symbol (- + / *)
+// if user clicks “=", run the calculation function
+// if user adds another item to the array, return the calculation and push new item into the array
+// once user clicks “=“, run calculation function
 
 let result;
-let numberKeys = {
-    1: 1,
-    2: 2,
-    3: 3,
-    4: 4,
-    5: 5,
-    6: 6,
-    7: 7,
-    8: 8,
-    9: 9,
-    0: 0
-};
+let numberKeys = [1,2,3,4,5,6,7,8,9,0];
+// let input = document.getElementById("screen").value;
+let numbers = [];
+numbers.push(document.getElementById("screen").value);
+numbers.forEach(function(element) {
+    console.log(element);
+    });
 
-// 1. 
 
 document.querySelector("#one").addEventListener("click", function() {
     let text = document.querySelector("#screen");
