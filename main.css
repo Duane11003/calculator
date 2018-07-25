@@ -26,3 +26,19 @@ button.integer {
 button.clear {
     color: black;
 }
+
+#screen {
+    height: 30px;
+    border-bottom: 1px solid black;
+    margin-bottom: 60px;
+}
+
+footer {
+    background: black;
+    color: gray;
+    width: 70%;
+    text-align: center;
+    height: 20px;
+    padding-top: auto;
+    margin-top: 90px;
+}

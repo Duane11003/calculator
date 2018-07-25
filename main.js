@@ -6,17 +6,22 @@ $(document).ready(function() {
     updateScreen(input1);
     
     $('.integer').on('click', function(evt) {
-      var buttonPressed = $(this).val();
+      var buttonPressed = $(this).html();
       console.log(buttonPressed);
       
-   if (isNumber(buttonPressed)) {
+        if(buttonPressed === "AC"){
+          input1 = 0;
+          input2 = '0';
+        } else if (isNumber(buttonPressed)) {
         if (input2 === '0') input2 = buttonPressed;
         else input2 = input2 + buttonPressed;
       } else if (isOperator(buttonPressed)) {
         prevEntry = parseFloat(input2);
         operation = buttonPressed;
         input2 = '';
-      } else if (buttonPressed === '=') {
+       } else if (buttonPressed === "."){
+         input2 += '.';
+       } else if (buttonPressed === '=') {
         input2 = operate(prevEntry, input2, operation);
         operation = null;
       }
@@ -27,7 +32,7 @@ $(document).ready(function() {
    
    updateScreen = function(displayValue) {
     var displayValue = displayValue.toString();
-    $('#screen').val(displayValue.substring(0));
+    $('#screen').html(displayValue.substring(0));
    };
    
    isNumber = function(value) {
@@ -47,3 +52,5 @@ $(document).ready(function() {
     if (operation === '*') return a * b;
     if (operation === '/') return a / b;
    }
+
+ 
